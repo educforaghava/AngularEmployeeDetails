@@ -13,7 +13,7 @@
                         <th scope="col">Email</th>
                     </tr>
                 </thead>
-                <tbody *ngFor="let emp of employees">
+                <tbody defColOnEvent *ngFor="let emp of employees">
                     <tr *ngIf="expression">
                         <th scope="row">{{emp.employee_id}}</th>
                         <td>{{emp.first_name}}</td>

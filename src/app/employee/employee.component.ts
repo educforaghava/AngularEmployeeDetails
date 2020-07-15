@@ -48,6 +48,22 @@ export class EmployeeComponent implements OnInit {
         dept : 'Tester',
         city : 'Hyderabad',
         email : 'aishu@mdo.com'
+      },
+      {
+        employee_id : 5,
+        first_name : 'Dudi',
+        last_name : 'Aishwarya',
+        dept : 'Tester',
+        city : 'Hyderabad',
+        email : 'aishu@mdo.com'
+      },
+      {
+        employee_id : 6,
+        first_name : 'Dudi',
+        last_name : 'Aishwarya',
+        dept : 'Tester',
+        city : 'Hyderabad',
+        email : 'aishu@mdo.com'
       }
     ]
 
