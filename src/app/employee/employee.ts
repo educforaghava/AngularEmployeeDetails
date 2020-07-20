@@ -4,5 +4,7 @@ export interface Employee {
     last_name : string,
     dept : string,
     city : string,
-    email : string
+    email : string,
+    dob : Date,
+    salary : number
 }

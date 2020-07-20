@@ -11,6 +11,8 @@
                         <th scope="col">Dept</th>
                         <th scope="col">City</th>
                         <th scope="col">Email</th>
+                        <th scope="col">DOB</th>
+                        <th scope="col">Salary</th>
                     </tr>
                 </thead>
                 <tbody defColOnEvent *ngFor="let emp of employees">
@@ -21,6 +23,8 @@
                         <td>{{emp.dept}}</td>
                         <td>{{emp.city}}</td>
                         <td>{{emp.email}}</td>
+                        <td>{{emp.dob | date : 'mediumDate' | uppercase}}</td>
+                        <td>{{emp.salary | currency : 'INR'}}</td>
                     </tr>
                 </tbody>
             </table>

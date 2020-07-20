@@ -23,47 +23,59 @@ export class EmployeeComponent implements OnInit {
         last_name : 'Otto',
         dept : 'HR',
         city : 'Bangalore',
-        email : 'help@mdo.com'
+        email : 'help@mdo.com',
+        dob : new Date("1984-03-16"),
+        salary : 200000
       },
       {
         employee_id : 2,
-        first_name : 'Dudi',
+        first_name : 'Sangi',
         last_name : 'Raghava',
         dept : 'IT',
         city : 'Bangalore',
-        email : 'help12@mdo.com'
+        email : 'help12@mdo.com',
+        dob : new Date("1973-03-16"),
+        salary : 300000
       },
       {
         employee_id : 3,
-        first_name : 'Dudi',
+        first_name : 'Tulasi',
         last_name : 'Rakesh',
         dept : 'Accounts',
         city : 'Hyderabad',
-        email : 'ragh@mdo.com'
+        email : 'ragh@mdo.com',
+        dob : new Date("1985-03-16"),
+        salary : 400000
       },
       {
         employee_id : 4,
-        first_name : 'Dudi',
+        first_name : 'Kedar',
         last_name : 'Aishwarya',
         dept : 'Tester',
         city : 'Hyderabad',
-        email : 'aishu@mdo.com'
+        email : 'aishu@mdo.com',
+        dob : new Date("1975-03-16"),
+        salary : 500000
       },
       {
         employee_id : 5,
         first_name : 'Dudi',
-        last_name : 'Aishwarya',
+        last_name : 'Akshaya',
         dept : 'Tester',
         city : 'Hyderabad',
-        email : 'aishu@mdo.com'
+        email : 'aishu@mdo.com',
+        dob : new Date("1986-03-16"),
+        salary : 600000
       },
       {
         employee_id : 6,
-        first_name : 'Dudi',
-        last_name : 'Aishwarya',
+        first_name : 'Yaha',
+        last_name : 'Jene',
         dept : 'Tester',
         city : 'Hyderabad',
-        email : 'aishu@mdo.com'
+        email : 'aishu@mdo.com',
+        dob : new Date("1976-03-16"),
+        salary : 700000
       }
     ]
 
