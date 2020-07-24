@@ -1,0 +1,25 @@
+<div>
+    <div class="row justify-content-center">
+        <div class="col-auto">
+
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Employee ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Salary</th>
+                        <th scope="col">Age</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr defColOnEvent *ngFor="let emp of newEmployees">
+                        <td scope="row">{{emp.employee_id}}</td>
+                        <td scope="row">{{emp.employee_name}}</td>
+                        <td scope="row">{{emp.employee_salary}}</td>
+                        <td scope="row">{{emp.employee_age}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
