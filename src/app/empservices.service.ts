@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { NewEmployee } from './new-employee/employee2';
+import { ApiResponse } from './new-employee/employee2';
 import {catchError} from 'rxjs/operators';
 
 @Injectable({
@@ -15,16 +15,16 @@ export class EmpservicesService {
     this.url = "http://dummy.restapiexample.com/api/v1/employees";
   }
 
-  public getNewEmployees():Observable<NewEmployee[]> {
-    
-    return 
-    this.http.get<NewEmployee[]>(this.url)
-      .pipe(catchError((error:HttpErrorResponse)=>this.errorHandler));
-
+  public getNewEmployees(): Observable<ApiResponse> {
+    return this.http.get<ApiResponse>(this.url);
   }
 
-  errorHandler(error:HttpErrorResponse){//handler to trap errors
-    return throwError(error.message);
- }
+  private handleError(error: any) {
+    // In a real world app, we might use a remote logging infrastructure
+    let errMsg: string;
+    errMsg = error.message ? error.message : error.toString();
+    console.error(errMsg);
+    return Observable.throw(errMsg);
+  }
 
 }

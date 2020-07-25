@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NewEmployee } from './employee2';
+import { ApiResponse, NewEmployee } from './employee2';
 import { EmpservicesService } from '../empservices.service';
 import { Observable } from 'rxjs';
 
@@ -12,7 +12,8 @@ import { Observable } from 'rxjs';
 export class NewEmployeeComponent implements OnInit {
 
     public errorMsg: any;
-    public newEmployees : NewEmployee[] = []; 
+    public apiResponse : ApiResponse; 
+    public newEmployees : NewEmployee;
     expression : boolean = true;
     errorItem : boolean = false;
     errorMessage: string;
@@ -21,8 +22,11 @@ export class NewEmployeeComponent implements OnInit {
 
     ngOnInit() {
         this._empservices.getNewEmployees()
-        .subscribe(data => { this.newEmployees = data 
-            ,console.log(this.newEmployees)} 
+        .subscribe(
+            inputData => 
+            { this.newEmployees = inputData.data, 
+                console.log(this.newEmployees)
+            } 
             ,error => this.errorMessage = <any>error );
 
     }

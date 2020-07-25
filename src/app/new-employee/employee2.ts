@@ -1,5 +1,10 @@
+export interface ApiResponse {
+    status : string,
+    data : NewEmployee
+}
+
 export interface NewEmployee {
-    employee_id : number,
+    id : number,
     employee_name : string,
     employee_salary : number,
     employee_age : number,
